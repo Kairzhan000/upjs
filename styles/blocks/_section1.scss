@@ -1,0 +1,32 @@
+@use '../helpers' as *;
+
+.main__inner_section1{
+    padding-top: rem(100);
+    &_inner{
+        display: flex;
+        flex-direction: row;
+        gap: rem(130);
+
+        &_left{}
+
+        &_right{
+            padding-top: rem(20);
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(25);
+            &_top{
+                font-size: rem(36);
+                font-family: 'Kumbh sans';
+                font-weight: bold;
+                width: rem(406);
+            }
+            &_bottom{
+                font-size: rem(18);
+                font-family: 'Kumbh sans';
+                font-weight: 700;
+                width: rem(406);
+                color: blue;
+            }
+        }
+    }
+}

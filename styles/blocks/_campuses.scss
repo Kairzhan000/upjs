@@ -1,0 +1,52 @@
+@use '../helpers' as *;
+
+.campuses-section {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.campuses-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: #003366;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.campus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.campus-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+  font-family: 'Kumbh Sans', sans-serif;
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #006FFF;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

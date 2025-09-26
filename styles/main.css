@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+@font-face {
+  font-family: "Kumbh sans";
+  src: url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+  font-style: normal;
+  font-display: swap;
+}
 /* Ограничиваем ширину контента */
 .container {
   max-width: 1440px;
@@ -47,6 +54,258 @@
   font-size: 14px;
   border-radius: 4px;
   border: 1px solid #ccc;
+}
+
+.main__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px; /* для отступов на маленьких экранах */
+}
+
+.main__inner_section1 {
+  padding-top: 6.25rem;
+}
+.main__inner_section1_inner {
+  display: flex;
+  flex-direction: row;
+  gap: 8.125rem;
+}
+.main__inner_section1_inner_right {
+  padding-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5625rem;
+}
+.main__inner_section1_inner_right_top {
+  font-size: 2.25rem;
+  font-family: "Kumbh sans";
+  font-weight: bold;
+  width: 25.375rem;
+}
+.main__inner_section1_inner_right_bottom {
+  font-size: 1.125rem;
+  font-family: "Kumbh sans";
+  font-weight: 700;
+  width: 25.375rem;
+  color: blue;
+}
+
+/* Заголовок вне синей полосы */
+.section2__title {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Kumbh sans";
+  max-width: 1440px;
+  padding: 60px 20px;
+}
+
+.section2__title span {
+  color: #006FFF; /* Голубой акцент */
+}
+
+.section2_extra {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Синяя полоса */
+/* 🔵 Синяя секция — на всю ширину */
+.blue-section {
+  width: 100%;
+  background-color: #006FFF;
+  padding-top: 20px;
+  color: white;
+}
+
+/* 📦 Контейнер — ограничение по ширине */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Flex row */
+.section2__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Левая часть */
+.section2__left {
+  flex: 1;
+  padding-left: 1rem;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.section2__left_top {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: black;
+  font-family: "Kumbh sans";
+  width: 16.25rem;
+}
+
+.section2__left_bottom {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-family: "Kumbh sans";
+  width: 38.4375rem;
+}
+
+/* Правая часть */
+.section2__right {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.section2__right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.campuses-section {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.campuses-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Kumbh Sans", sans-serif;
+  color: #003366;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.campus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.campus-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.campus-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #006FFF;
+}
+.campus-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+.campus-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Burger Button */
+.floating-burger {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 45px;
+  height: 40px;
+  background-color: #003366;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.floating-burger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Floating Menu */
+.floating-menu {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #003366;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 1002;
+}
+
+.floating-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.floating-menu li {
+  margin: 10px 0;
+}
+
+.floating-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.floating-menu a:hover {
+  color: #00cfff;
+}
+
+/* Overlay */
+.floating-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 1000;
+}
+
+/* Убрать отступы по умолчанию */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /*# sourceMappingURL=main.css.map */

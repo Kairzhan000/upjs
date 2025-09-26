@@ -5,7 +5,23 @@
 @use 'globals';
 
 @use './blocks/header';
+@use './blocks/main';
+@use './blocks/section1';
+@use './blocks/section2';
+@use './blocks/campuses';
+@use './blocks/menu';
 
-body{
-    // background-color: black;
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+/* Убрать отступы по умолчанию */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
