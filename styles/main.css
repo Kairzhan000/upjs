@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* Ограничиваем ширину контента */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px; /* немного отступов по бокам */
+}
+
+/* Хедер на всю ширину */
+.header {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+/* Внутренности хедера */
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Логотип */
+.header__inner_left_logo img {
+  height: 50px;
+}
+
+/* Правая часть (поиск и язык) */
+.header__inner_right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Поисковая строка */
+.search-input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Языковое меню */
+.language-select {
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/*# sourceMappingURL=main.css.map */
