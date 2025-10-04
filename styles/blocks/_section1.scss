@@ -1,31 +1,84 @@
 @use '../helpers' as *;
 
-.main__inner_section1{
+.main__inner_section1 {
+    position: relative; // Чтобы можно было позиционировать псевдоэлемент
     padding-top: rem(100);
-    &_inner{
+    
+
+    @include mobile {
+        padding-top: rem(40);
+        padding-right: rem(10);
+    }
+
+    // Псевдоэлемент — синий блок в верхнем правом углу
+   
+
+    &_inner {
         display: flex;
         flex-direction: row;
         gap: rem(130);
 
-        &_left{}
+        @include tablet {
+            gap: rem(32);
+        }
 
-        &_right{
+        &_left {
+            img {
+                @include tablet {
+                    width: rem(400);
+                }
+
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+
+        &_right {
             padding-top: rem(20);
             display: flex;
             flex-direction: column;
             row-gap: rem(25);
-            &_top{
+            
+
+            @include mobile {
+                row-gap: rem(12);
+                padding-top: rem(0);
+            }
+
+            &_top {
                 font-size: rem(36);
                 font-family: 'Kumbh sans';
                 font-weight: bold;
                 width: rem(406);
+
+                @include tablet {
+                    font-size: rem(22);
+                    width: rem(348);
+                }
+
+                @include mobile {
+                    font-size: rem(24);
+                    width: rem(248);
+                }
             }
-            &_bottom{
+
+            &_bottom {
                 font-size: rem(18);
                 font-family: 'Kumbh sans';
                 font-weight: 700;
                 width: rem(406);
                 color: blue;
+
+                @include tablet {
+                    font-size: rem(14);
+                    width: rem(348);
+                }
+
+                @include mobile {
+                    font-size: rem(10);
+                    width: rem(246);
+                }
             }
         }
     }
