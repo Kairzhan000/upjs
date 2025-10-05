@@ -1,0 +1,86 @@
+/* Сброс отступов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Центровка всей страницы */
+body, html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Основной контейнер */
+.main {
+  max-width: 1440px;
+  width: 100%;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Заголовок */
+.main__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+strong {
+  color: #006FFF;
+}
+
+/* Изображение */
+.main__table img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ===== Медиа-запросы ===== */
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .main__title {
+    font-size: 1.75rem;
+    margin-bottom: 40px;
+  }
+
+  .main {
+    padding: 40px 16px;
+  }
+}
+
+/* Смартфоны */
+@media (max-width: 768px) {
+  .main__title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .main {
+    padding: 30px 12px;
+  }
+}
+
+/* Маленькие экраны, например iPhone SE */
+@media (max-width: 480px) {
+  .main__title {
+    font-size: 1.25rem;
+  }
+
+  .main {
+    padding: 20px 10px;
+  }
+}
