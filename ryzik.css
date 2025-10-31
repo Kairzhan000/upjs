@@ -1,0 +1,163 @@
+:root {
+  --blue: #005bbb;
+  --light-blue: #e6f0ff;
+  --dark-blue: #003f7d;
+  --gray-dark: #333;
+  --gray-light: #777;
+  --bg-light: #f9f9f9;
+  --green: #90ee90;
+  --yellow: #ffeb3b;
+  --orange: #ffb74d;
+  --red: #f44336;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-light);
+  color: var(--gray-dark);
+  padding: 30px;
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
+
+header {
+  background-color: var(--blue);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 3px 15px rgba(0, 91, 187, 0.4);
+  margin-bottom: 40px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+section h2 {
+  font-size: 2.2rem;
+  color: var(--blue);
+  border-bottom: 3px solid var(--blue);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.risk-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  border: 1px solid var(--light-blue);
+  border-radius: 8px;
+  padding: 25px;
+  background: #f9f9f9;
+}
+
+.risk-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--dark-blue);
+  font-size: 2rem; /* Увеличено */
+}
+
+.risk-heatmap {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(1, 60px);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 6px;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Risk levels */
+.risk-0 { background: #fff; }
+.risk-20 { background: var(--green); }
+.risk-40 { background: var(--yellow); }
+.risk-60 { background: var(--orange); }
+.risk-80 { background: var(--red); color: #fff; }
+.risk-100 { background: #8b0000; color: #fff; }
+
+.risk-description {
+  font-size: 1.4rem; /* Увеличено */
+  color: var(--gray-dark);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.risk-metrics {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem; /* Увеличено для презентации */
+  font-weight: bold;
+}
+
+.metric {
+  background: var(--light-blue);
+  padding: 8px 15px;
+  border-radius: 6px;
+  flex: 1;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.metric:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 800px) {
+  .risk-heatmap {
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 1rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .risk-title {
+    font-size: 1.6rem;
+  }
+  .risk-heatmap {
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: 1fr;
+  }
+  .cell {
+    font-size: 0.85rem;
+  }
+  .risk-description {
+    font-size: 1.2rem;
+  }
+  .risk-metrics {
+    flex-direction: column;
+    font-size: 1.1rem;
+  }
+  .metric {
+    margin-bottom: 10px;
+  }
+  .metric:last-child {
+    margin-bottom: 0;
+  }
+}
